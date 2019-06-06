@@ -25,6 +25,9 @@ while guess != number:
         print(guess)
     guess = random.randint(1, 100)
     tries += 1
+    
+if guess == number:
+    print("\nYou lost!")
 
 print(f"\nThe computer last guess was the number {guess} ({tries} tries)!")
 
