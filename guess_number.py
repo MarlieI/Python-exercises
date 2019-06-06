@@ -25,6 +25,9 @@ while guess != number:
     elif guess < number:
         print("Higher...")
 
+if guess == number:
+   print("\nYou won!")       
+
 print(f"\nIt took you {tries} tries.")
 print(f"The correct number was: {number}")
 
