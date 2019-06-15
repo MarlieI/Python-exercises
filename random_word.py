@@ -15,7 +15,7 @@ WORDS = ("television", "python", "radio", "baby", "computer", "buffy", "console"
 word = random.choice(WORDS)
 
 # welcome message
-print("Welcome the 'random word game'!")
+print("Welcome to the 'random word game'!")
 
 print("\nThe computer picks a word and tells you the amount of letters it has.")
 print("You get five chances to ask the computer if a certain letter is in the word.")
