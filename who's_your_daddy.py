@@ -27,6 +27,7 @@ while choice != "0":
                 2 - Add son-father pair
                 3 - Replace the daddy
                 4 - Delete son-father pair
+                5 - Show all the sons
     ''')
     choice = input("Choice: ")
     # 0 - quit the game
@@ -67,6 +68,9 @@ while choice != "0":
             print("Alright,", son, "and his father", father, "are deleted from our database.")
         else:
             print("The son isn't part of our database (yet).")
+     # 5 - show sons
+    elif choice == "5":
+        print(father_son.keys())
     # unknown choice
     else:
         print("\nInvalid choice, choose either 0,1,2,3 or 4.")
