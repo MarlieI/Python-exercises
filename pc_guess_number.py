@@ -19,12 +19,13 @@ while guess != number:
     if tries >= 10:
         print("\nThe computer didn't guess the right number in time, you won!")
         break
-    elif guess > number:
+    elif guess > number or guess < number:
         print(guess)
-    elif guess < number:
-        print(guess)
-    guess = random.randint(1, 100)
-    tries += 1
+        tries += 1
+        if tries == 10:
+            break
+        else:
+            guess = random.randint(1, 100)
     
 if guess == number:
     print("\nYou lost!")
