@@ -8,7 +8,6 @@ number = 0
 min_num = 1
 max_num = 100
 hint = ""
-guess = (min_num + max_num)//2
 
 print("The PC has to guess your number.")
 
@@ -21,9 +20,11 @@ while number < 1 or number > 100:
         continue
     else:
         continue
+
 input("Let the guessing game begin.\n")
 
 # program has to guess
+guess = ""
 while guess != number:
     tries += 1
     guess = (min_num + max_num)//2
@@ -31,23 +32,21 @@ while guess != number:
     if guess == number:
         print(f"\nThe pc guessed the right number ({guess}), in {tries} tries")
         input("Press enter to exit the program.")
-        break
+
     
 # program asks user to go higher or lower
     while guess != number:
         hint = input("Higher or lower?:")
-        if hint not in ("higher", "lower"):
-            print("Please correct spelling and write in lowercase.")
+        if hint.lower() not in ("higher", "lower"):
+            print("Please correct spelling.")
         else:
             break
 # program adjusts binary search
-    if hint == "higher":
+    if hint.lower() == "higher":
         print(f"You told the pc to guess {hint}.")
         min_num = guess + 1
-    elif hint == "lower":
+    elif hint.lower() == "lower":
         print(f"You told the pc to guess {hint}.")
         max_num = guess - 1
     else:
-        print("\nUnexpected error, you most likely didn't spell 'higher' or 'lower' correctly.")
-        input("Please restart the program and try again.")
-        break
+        print("\nUnexpected error.")
