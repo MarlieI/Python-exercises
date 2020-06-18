@@ -3,27 +3,17 @@
 # Challenge 1, chapter 3 python for the absolute beginner
 
 import random
-number = random.randint(1, 5)
+
+messages = ["Pay attention to your family. Don't take them for granted.",
+            "Your home will be filled with peace and harmony.",
+            "Fall for someone who's not your type.",
+            "Somebody appreciates the unique you.",
+            "If you haven't got it, just fake it!"
+            ]
 
 print("Welcome to the 'fortune cookie game'.")
-input("\nPress enter to get your fortune cookie of the day.")
+input("\nPress enter to get your fortune cookie of the day.\n")
 
-if number == 1:
-    print("Pay attention to your family. Don't take them for granted.")
-
-elif number == 2:
-    print("Your home will be filled with peace and harmony.")
-
-elif number == 3:
-    print("Fall for someone who's not your type.")
-
-elif number == 4:
-    print("Somebody appreciates the unique you.")
-
-elif number == 5:
-    print("If you haven't got it, just fake it!")
-
-else:
-    print("Illegal fortune cookie, error.")
+print(messages[random.randint(0, len(messages)-1)])
 
 input("\nPress enter to exit the program.")
