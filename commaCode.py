@@ -5,7 +5,7 @@
 # a comma and a space, with and inserted before the last item.
 
 def comma_list(change_list):
-    if change_list == []:
+    if not change_list:
         print('The list is empty.')
     for i in range(len(change_list)):
         if change_list[i] == change_list[-1] and len(change_list) != 1:
@@ -17,3 +17,4 @@ def comma_list(change_list):
           
 spam = ['apples', 'bananas', 'tofu', 'cats']
 comma_list(spam)
+
